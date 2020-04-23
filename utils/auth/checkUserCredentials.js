@@ -4,7 +4,7 @@ export const checkUserCredentials = async (ctx) => {
       cookie: ctx.req.headers.cookie,
     },
   })
-  if (response.status === !200) {
+  if (response.status !== 200) {
     ctx.res.writeHead(302, { Location: "/" })
     ctx.res.end()
   }

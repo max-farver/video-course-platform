@@ -1,16 +1,25 @@
 import { useRouter } from "next/router"
+import { useQueryOnClient } from "../../../utils/hooks"
+import { getSeries } from "../../../utils/datocms/api"
+import { useState, useEffect } from "react"
 
-const CoursePage = () => {
+const CoursePage = ({ slug }) => {
   const router = useRouter()
-  const { course } = router.query
 
+  const data = useQueryOnClient(getSeries, { slug: slug })
   return (
     <div>
-      <h1>Course Name</h1>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a
-        dolores illum labore velit ex?
-      </h3>
+      {data && (
+        <>
+          <h1>{data.seriesName}</h1>
+          <h3>{data.description}</h3>
+        </>
+      )}
     </div>
   )
 }
+
+export const getServerSideProps = (ctx) => {
+  return { props: { slug: ctx.params.course } }
+}
+export default CoursePage

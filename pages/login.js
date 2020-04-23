@@ -1,9 +1,11 @@
 import { auth } from "../utils/auth/firebase"
 import { useForm } from "react-hook-form"
 import { useAppState } from "../utils/appContext"
+import { useRouter, Router } from "next/router"
 
 const Login = () => {
-  const { setUser } = useAppState()
+  const router = useRouter()
+  const { user, setUser } = useAppState()
   const { register, handleSubmit, watch, errors } = useForm()
   const onSubmit = async ({ email, password }) => {
     console.log(auth())
@@ -22,10 +24,13 @@ const Login = () => {
       body: JSON.stringify({ idToken: idToken }),
     })
 
-    setUser({ email: auth().currentUser.email })
+    setUser(auth().currentUser.email)
 
     auth().signOut()
+    router.push("/")
   }
+
+  user && router.push("/")
 
   return (
     <div className="max-w-sm mx-auto">
