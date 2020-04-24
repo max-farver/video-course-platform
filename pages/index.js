@@ -17,11 +17,11 @@ const Home = () => {
     <Layout>
       <header
         id="hero"
-        className="relative  h-hero mt-10
+        className="relative h-hero mt-10
       "
       >
-        <div className="relative h-full w-full bg-gray-200 -z-1 overflow-hidden"></div>
-        <div className="md:flex flex-col justify-center absolute bottom-0 md:right-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-left bg-primary-hero p-4 -z-1">
+        <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden"></div>
+        <div className="md:flex flex-col justify-center absolute bottom-0 md:right-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-left bg-primary-hero p-4">
           <h1 className="text-5xl font-display text-secondary-500 hero-text-shadow leading-10 mb-1">
             Justin
             <br />
@@ -62,7 +62,7 @@ const Home = () => {
               </p>
             </div>
             <Link href="about">
-              <a className="max-w-xs text-xl btn-primary mt-4 md:mt-16">
+              <a className="max-w-xs mx-auto md:ml-0text-xl btn-primary mt-4 md:mt-16">
                 My Background
               </a>
             </Link>
@@ -174,7 +174,7 @@ const Home = () => {
           id="blog-intro"
           className="bg-white pt-4 pb-20 px-4 sm:px-6 lg:pt-12 lg:pb-28 lg:px-8"
         >
-          <div className="relative max-w-lg mx-auto lg:max-w-6xl">
+          <div className="max-w-lg mx-auto lg:max-w-6xl">
             <div className="grid gap-16 pt-10 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
               <div>
                 <p className="text-sm leading-5 text-gray-500">
@@ -249,7 +249,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center cursor-pointer">
-                <Link href="/blog">
+                <Link href="blog">
                   <a className="max-w-xs text-2xl btn-primary">
                     View All Posts
                   </a>

@@ -10,7 +10,7 @@ const variants = {
 const MobileMenu = ({ isShowing, navLinks }) => {
   return (
     <motion.div
-      className="absolute top-0 right-0 w-40 text-center bg-primary-100 h-screen -z-10"
+      className="absolute top-0 right-0 w-40 text-center bg-primary-900 h-screen -z-10"
       animate={isShowing ? "open" : "closed"}
       initial={{ x: 160 }}
       variants={variants}
