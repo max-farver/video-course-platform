@@ -1,10 +1,10 @@
-import { checkUserCredentials } from "../../utils/auth/checkUserCredentials"
-import { useAppState } from "../../utils/appContext"
+import { checkUserCredentials } from "../utils/auth/checkUserCredentials"
+import { useAppState } from "../utils/appContext"
 import { useState, useEffect } from "react"
-import { getAllSeriesForDashboard } from "../../utils/datocms/api"
-import { useQueryOnClient } from "../../utils/hooks"
+import { getAllSeriesForDashboard } from "../utils/datocms/api"
+import { useQueryOnClient } from "../utils/hooks"
 
-import SeriesCard from "../../components/common/SeriesCard"
+import SeriesCard from "../components/common/SeriesCard"
 
 const Dashboard = () => {
   const { user } = useAppState()

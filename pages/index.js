@@ -17,122 +17,248 @@ const Home = () => {
     <Layout>
       <header
         id="hero"
-        className="relative h-hero mt-10
+        className="relative  h-hero mt-10
       "
       >
-        <div className="relative h-full w-full bg-red-400 -z-1 overflow-hidden">
-          <img
-            className="absolute bottom-0 h-full"
-            src="https://source.unsplash.com/random"
-          />
-        </div>
-        <div className="absolute bottom-0 w-full h-72 text-center bg-primary-hero p-4">
-          <h1 className="text-5xl font-display text-secondary-500 hero-text-shadow leading-9 mb-1">
+        <div className="relative h-full w-full bg-gray-200 -z-1 overflow-hidden"></div>
+        <div className="md:flex flex-col justify-center absolute bottom-0 md:right-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-left bg-primary-hero p-4 -z-1">
+          <h1 className="text-5xl font-display text-secondary-500 hero-text-shadow leading-10 mb-1">
             Justin
             <br />
             Timberlake
           </h1>
-          <p className="text-gray-1000 hero-text-shadow">Bankruptcy Finance</p>
-          <div className="border-secondary-900 border-b my-3"></div>
-          <h3 className="text-4xl text-gray-1000 hero-text-shadow leading-9">
+          <p className="text-gray-50 hero-text-shadow">Bankruptcy Finance</p>
+          <div className="border-secondary-100 border-b my-3 md:max-w-xs"></div>
+          <h3 className="text-4xl text-gray-50 hero-text-shadow leading-9">
             Over <span>800</span>
             <br />
             Clients Served
           </h3>
-          <button className=" font-display bg-secondary-500 px-8 py-1 shadow-md mt-4">
-            Get in Touch
-          </button>
-        </div>
-      </header>
-      <section id="intro" className="px-4 py-6">
-        <div className="">
-          <h2 className="section-header">Bankruptcy Financial Specialist</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit
-          est laboriosam aperiam labore ut ipsa in illum! Necessitatibus
-          explicabo voluptas iste? Velit quia ad quisquam, beatae praesentium
-          voluptatibus ipsa deserunt, corrupti, at labore veritatis totam!
-          Tenetur odio non incidunt!
-        </p>
-      </section>
-      <section id="quote" className="px-4 py-6 bg-gray-100 text-gray-1000">
-        <div>
-          <p className="italic">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-            assumenda, hic eius quisquam quas temporibus vel corrupti
-            reiciendis."
-          </p>
-          <p className="text-right text-2xl font-display">- Dr. House</p>
-        </div>
-        {/* <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-            assumenda, hic eius quisquam quas temporibus vel corrupti
-            reiciendis.
-          </p>
-          <p>Dr. House</p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-            assumenda, hic eius quisquam quas temporibus vel corrupti
-            reiciendis.
-          </p>
-          <p>Dr. House</p>
-        </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-            assumenda, hic eius quisquam quas temporibus vel corrupti
-            reiciendis.
-          </p>
-          <p>Dr. House</p>
-        </div> */}
-      </section>
-      <section id="methods" className="px-4 py-6">
-        <div>
-          <h2 className="section-header">Bankruptcy Financial Specialist</h2>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sit
-          est laboriosam aperiam labore ut ipsa in illum! Necessitatibus
-          explicabo voluptas iste? Velit quia ad quisquam, beatae praesentium
-          voluptatibus ipsa deserunt, corrupti, at labore veritatis totam!
-          Tenetur odio non incidunt!
-        </p>
-      </section>
-      <section
-        id="calculator"
-        className="px-4 py-6 bg-primary-100 text-gray-1000"
-      >
-        <div>
-          <h2 className="section-header">Bankruptcy Financial Specialist</h2>
-        </div>
-        <div className="bg-gray-800 h-64 p-4 text-gray-100">
-          Calculator
-          <br />
-          Here
-        </div>
-      </section>
-      <div id="blog" className="px-4 py-6">
-        <input
-          type="search"
-          name="articleSearch"
-          placeholder="Search the knowledge base..."
-          className="mb-6 max-w-sm w-full mx-auto px-4 py-2 bg-gray-800 placeholder-gray-600 text-gray-100"
-        />
-        <div className="shadow-xl p-2 bg-gray-900">
-          <h4 className="text-2xl">Article Name</h4>
-          <p className="text-xs">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-            accusamus nisi repellendus ipsam culpa voluptatum...
-          </p>
-          <Link href="">
-            <a className="block text-right underline">Read More</a>
+          <Link href="contact">
+            <a className="max-w-xs mx-auto text-xl md:ml-0 btn-secondary mt-4">
+              Get in Touch
+            </a>
           </Link>
         </div>
-      </div>
+      </header>
+      <main>
+        <section
+          id="intro"
+          className="section md:flex flex-row justify-between"
+        >
+          <div className="md:w-1/2 self-center md:flex flex-col justify-center">
+            <div>
+              <div className="">
+                <h2 className="section-header">
+                  Bankruptcy Financial Specialist
+                </h2>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                sit est laboriosam aperiam labore ut ipsa in illum!
+                Necessitatibus explicabo voluptas iste? Velit quia ad quisquam,
+                beatae praesentium voluptatibus ipsa deserunt, corrupti, at
+                labore veritatis totam! Tenetur odio non incidunt!
+              </p>
+            </div>
+            <Link href="about">
+              <a className="max-w-xs text-xl btn-primary mt-4 md:mt-16">
+                My Background
+              </a>
+            </Link>
+          </div>
+          <div className="hidden md:block w-56 bg-gray-700 h-96 w-96"></div>
+        </section>
+        <section
+          id="quote"
+          className="px-4 py-6 bg-gray-800 text-gray-50 flex flex-row justify-evenly flex-wrap content-around md:h-108"
+        >
+          <div className="w-full md:w-1/2 lg:w-1/3">
+            <div className="quote">
+              <p className="italic">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                assumenda, hic eius quisquam quas temporibus vel corrupti
+                reiciendis."
+              </p>
+              <p className="text-right text-2xl font-display">- Dr. House</p>
+            </div>
+          </div>
+          <div className="hidden md:block w-1/2 lg:w-1/3">
+            <div className="quote">
+              <p className="italic">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                assumenda, hic eius quisquam quas temporibus vel corrupti
+                reiciendis.
+              </p>
+              <p className="text-right text-2xl font-display">- Dr. House</p>
+            </div>
+          </div>
+          <div className="hidden md:block w-1/2 lg:w-1/3">
+            <div className="quote">
+              <p className="italic">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                assumenda, hic eius quisquam quas temporibus vel corrupti
+                reiciendis.
+              </p>
+              <p className="text-right text-2xl font-display">- Dr. House</p>
+            </div>
+          </div>
+          <div className="hidden lg:block w-1/2 lg:w-1/3">
+            <div className="quote">
+              <p className="italic">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                assumenda, hic eius quisquam quas temporibus vel corrupti
+                reiciendis.
+              </p>
+              <p className="text-right text-2xl font-display">- Dr. House</p>
+            </div>
+          </div>
+          <div className="hidden lg:block w-1/2 lg:w-1/3">
+            <div className="quote">
+              <p className="italic">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                assumenda, hic eius quisquam quas temporibus vel corrupti
+                reiciendis.
+              </p>
+              <p className="text-right text-2xl font-display">- Dr. House</p>
+            </div>
+          </div>
+        </section>
+        <section
+          id="methods"
+          className="section md:flex flex-row justify-between items-center"
+        >
+          <div className="hidden md:block w-56 bg-gray-700 h-96 w-96"></div>
+          <div className="md:w-1/2">
+            <div>
+              <h2 className="section-header">
+                Bankruptcy Financial Specialist
+              </h2>
+            </div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
+              provident, alias nulla blanditiis earum facere quisquam! Repellat
+              nisi ullam voluptas quas error? Nisi, ut tenetur alias itaque unde
+              esse incidunt, pariatur similique placeat nostrum, assumenda
+              perferendis molestias eligendi beatae earum ipsum quis ex
+              voluptatem quibusdam doloribus. Repellendus doloremque,
+              necessitatibus rem blanditiis esse quisquam nisi unde accusamus
+              ducimus voluptatem, illo quidem?
+            </p>
+          </div>
+        </section>
+        <section id="calculator" className="bg-primary-900 text-gray-50">
+          <div className="section md:flex flex-row justify-between items-center">
+            <div className="md:w-1/2">
+              <h2 className="section-header mb-2">
+                Can Declaring Bankruptcy Help Me?
+              </h2>
+              <p className="">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Repellat laborum repellendus optio, saepe pariatur et mollitia
+                iure qui veniam iusto beatae necessitatibus fugiat incidunt?
+                Voluptates soluta perferendis debitis iure iusto tempora
+                perspiciatis vitae, modi veniam, rem asperiores blanditiis nulla
+                corporis quia. Ipsum nisi error amet dolorum quam fugit
+                aspernatur minima.
+              </p>
+            </div>
+            <div className="mt-6 md:mt-0 bg-gray-200 h-72 w-full md:w-96 p-4 text-gray-900">
+              Calculator
+              <br />
+              Here
+            </div>
+          </div>
+        </section>
+        <section
+          id="blog-intro"
+          className="bg-white pt-4 pb-20 px-4 sm:px-6 lg:pt-12 lg:pb-28 lg:px-8"
+        >
+          <div className="relative max-w-lg mx-auto lg:max-w-6xl">
+            <div className="grid gap-16 pt-10 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
+              <div>
+                <p className="text-sm leading-5 text-gray-500">
+                  <time dateTime="2020-03-16">Mar 16, 2020</time>
+                </p>
+                <a href="#" className="block">
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Boost your conversion rate
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </a>
+                <div className="mt-3">
+                  <a
+                    href="#"
+                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+              <div>
+                <p className="text-sm leading-5 text-gray-500">
+                  <time dateTime="2020-03-16">Mar 16, 2020</time>
+                </p>
+                <a href="#" className="block">
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Boost your conversion rate
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </a>
+                <div className="mt-3">
+                  <a
+                    href="#"
+                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+              <div>
+                <p className="text-sm leading-5 text-gray-500">
+                  <time dateTime="2020-03-16">Mar 16, 2020</time>
+                </p>
+                <a href="#" className="block">
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Boost your conversion rate
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </a>
+                <div className="mt-3">
+                  <a
+                    href="#"
+                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                  >
+                    Read full story
+                  </a>
+                </div>
+              </div>
+              <div className="flex justify-center items-center cursor-pointer">
+                <Link href="/blog">
+                  <a className="max-w-xs text-2xl btn-primary">
+                    View All Posts
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </Layout>
   )
 }
