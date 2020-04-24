@@ -16,7 +16,7 @@ const MobileMenu = ({ isShowing, navLinks }) => {
       variants={variants}
       transition={{ stiffness: 1, duration: 0.2 }}
     >
-      <ul className="flex flex-col pt-16 px-4">
+      <ul className="flex flex-col pt-16 px-4 text-gray-50">
         {navLinks.map((link) => (
           <Link key={`${link.name}_${link.path}_mobile`} href={link.path}>
             <a className="mb-4">{link.name}</a>

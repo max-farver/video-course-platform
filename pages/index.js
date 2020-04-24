@@ -15,11 +15,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <header
-        id="hero"
-        className="relative h-hero mt-10
-      "
-      >
+      <header id="hero" className="relative h-hero">
         <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden"></div>
         <div className="md:flex flex-col justify-center absolute bottom-0 md:right-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-left bg-primary-hero p-4">
           <h1 className="text-5xl font-display text-secondary-500 hero-text-shadow leading-10 mb-1">
@@ -27,7 +23,9 @@ const Home = () => {
             <br />
             Timberlake
           </h1>
-          <p className="text-gray-50 hero-text-shadow">Bankruptcy Finance</p>
+          <p className="text-gray-50 hero-text-shadow tracking-wide">
+            Bankruptcy Finance
+          </p>
           <div className="border-secondary-100 border-b my-3 md:max-w-xs"></div>
           <h3 className="text-4xl text-gray-50 hero-text-shadow leading-9">
             Over <span>800</span>
@@ -62,7 +60,7 @@ const Home = () => {
               </p>
             </div>
             <Link href="about">
-              <a className="max-w-xs mx-auto md:ml-0text-xl btn-primary mt-4 md:mt-16">
+              <a className="max-w-xs mx-auto md:ml-0 text-xl md:text-2xl btn-primary mt-4 md:mt-16 ">
                 My Background
               </a>
             </Link>
@@ -75,52 +73,62 @@ const Home = () => {
         >
           <div className="w-full md:w-1/2 lg:w-1/3">
             <div className="quote">
-              <p className="italic">
+              <p className="italic text-gray-50">
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 assumenda, hic eius quisquam quas temporibus vel corrupti
                 reiciendis."
               </p>
-              <p className="text-right text-2xl font-display">- Dr. House</p>
+              <p className="text-right text-2xl font-display text-gray-50">
+                - Dr. House
+              </p>
             </div>
           </div>
           <div className="hidden md:block w-1/2 lg:w-1/3">
             <div className="quote">
-              <p className="italic">
+              <p className="italic text-gray-50">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 assumenda, hic eius quisquam quas temporibus vel corrupti
                 reiciendis.
               </p>
-              <p className="text-right text-2xl font-display">- Dr. House</p>
+              <p className="text-right text-2xl font-display text-gray-50">
+                - Dr. House
+              </p>
             </div>
           </div>
           <div className="hidden md:block w-1/2 lg:w-1/3">
             <div className="quote">
-              <p className="italic">
+              <p className="italic text-gray-50">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 assumenda, hic eius quisquam quas temporibus vel corrupti
                 reiciendis.
               </p>
-              <p className="text-right text-2xl font-display">- Dr. House</p>
+              <p className="text-right text-2xl font-display text-gray-50">
+                - Dr. House
+              </p>
             </div>
           </div>
           <div className="hidden lg:block w-1/2 lg:w-1/3">
             <div className="quote">
-              <p className="italic">
+              <p className="italic text-gray-50">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 assumenda, hic eius quisquam quas temporibus vel corrupti
                 reiciendis.
               </p>
-              <p className="text-right text-2xl font-display">- Dr. House</p>
+              <p className="text-right text-2xl font-display text-gray-50">
+                - Dr. House
+              </p>
             </div>
           </div>
           <div className="hidden lg:block w-1/2 lg:w-1/3">
             <div className="quote">
-              <p className="italic">
+              <p className="italic text-gray-50">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
                 assumenda, hic eius quisquam quas temporibus vel corrupti
                 reiciendis.
               </p>
-              <p className="text-right text-2xl font-display">- Dr. House</p>
+              <p className="text-right text-2xl font-display text-gray-50">
+                - Dr. House
+              </p>
             </div>
           </div>
         </section>
@@ -150,10 +158,10 @@ const Home = () => {
         <section id="calculator" className="bg-primary-900 text-gray-50">
           <div className="section md:flex flex-row justify-between items-center">
             <div className="md:w-1/2">
-              <h2 className="section-header mb-2">
+              <h2 className="section-header mb-2 text-primary-50">
                 Can Declaring Bankruptcy Help Me?
               </h2>
-              <p className="">
+              <p className="text-primary-300">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Repellat laborum repellendus optio, saepe pariatur et mollitia
                 iure qui veniam iusto beatae necessitatibus fugiat incidunt?
@@ -194,7 +202,7 @@ const Home = () => {
                 <div className="mt-3">
                   <a
                     href="#"
-                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                    className="text-base leading-6 font-bold tracking-wide text-primary-700 hover:text-primary-500 transition ease-in-out duration-150"
                   >
                     Read full story
                   </a>
@@ -218,7 +226,7 @@ const Home = () => {
                 <div className="mt-3">
                   <a
                     href="#"
-                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                    className="text-base leading-6 font-bold tracking-wide text-primary-700 hover:text-primary-500 transition ease-in-out duration-150"
                   >
                     Read full story
                   </a>
@@ -242,15 +250,15 @@ const Home = () => {
                 <div className="mt-3">
                   <a
                     href="#"
-                    className="text-base leading-6 font-bold tracking-wide text-secondary-700 hover:text-primary-500 transition ease-in-out duration-150"
+                    className="text-base leading-6 font-bold tracking-wide text-primary-700 hover:text-primary-00 transition ease-in-out duration-150"
                   >
                     Read full story
                   </a>
                 </div>
               </div>
-              <div className="flex justify-center items-center cursor-pointer">
+              <div className="flex justify-center items-center">
                 <Link href="blog">
-                  <a className="max-w-xs text-2xl btn-primary">
+                  <a className="max-w-xs text-2xl btn-primary cursor-pointer">
                     View All Posts
                   </a>
                 </Link>

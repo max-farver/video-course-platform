@@ -595,6 +595,36 @@ video {
   height: auto;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+p,
+ul {
+  color: #374151;
+  font-family: Cabin, sans-serif;
+}
+
+input {
+  color: #161e2e;
+}
+
+a {
+  font-family: Cabin, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Alegreya SC, serif;
+}
+
 .container {
   width: 100%;
 }
@@ -892,6 +922,7 @@ video {
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+  color: #f9fafb;
 }
 
 .section {
@@ -925,6 +956,7 @@ video {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   font-family: Alegreya SC, serif;
   text-align: center;
+  border-radius: 0.375rem;
 }
 
 .btn-primary {
@@ -936,6 +968,7 @@ video {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   font-family: Alegreya SC, serif;
   text-align: center;
+  border-radius: 0.375rem;
   background-color: #1F7A76;
   color: #f9fafb;
 }
@@ -949,6 +982,7 @@ video {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   font-family: Alegreya SC, serif;
   text-align: center;
+  border-radius: 0.375rem;
   background-color: #F0B428;
 }
 

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npx tailwindcss build styles/globalStyles.css -o styles/output.css",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "postcss-import": "^12.0.1",
     "react": "16.13.1",
     "react-datocms": "^1.2.1",
+    "react-device-detect": "^1.11.14",
     "react-dom": "16.13.1",
     "react-hook-form": "^5.4.2",
     "react-typography": "^0.16.19",

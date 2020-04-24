@@ -1,8 +1,35 @@
 @import "tailwindcss/base";
+
+#__next {
+  @apply flex flex-col min-h-screen justify-between;
+}
+
+p,
+ul {
+  @apply text-gray-700 font-body;
+}
+
+input {
+  @apply text-gray-900;
+}
+
+a {
+  @apply font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display;
+}
+
 @import "tailwindcss/components";
 
 .quote {
-  @apply max-w-xs mx-auto;
+  @apply max-w-xs mx-auto text-gray-50;
 }
 
 .section {
@@ -19,7 +46,7 @@
 }
 
 .btn {
-  @apply block px-8 py-1 shadow-md font-display text-center;
+  @apply block px-8 py-1 shadow-md font-display text-center rounded-md;
 }
 
 .btn-primary {

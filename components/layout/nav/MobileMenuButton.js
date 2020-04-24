@@ -4,7 +4,11 @@ import { motion } from "framer-motion"
 
 const MobileMenuButton = ({ isShowing, toggle }) => {
   return (
-    <button onClick={toggle} className="self-center focus:outline-none z-100">
+    <button
+      name={isShowing ? "close menu" : "open menu"}
+      onClick={toggle}
+      className="self-center focus:outline-none z-100"
+    >
       <svg height="24" width="24">
         <motion.line
           initial={{
