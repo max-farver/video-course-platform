@@ -6,8 +6,8 @@ const MobileMenuButton = ({ isShowing, toggle }) => {
   return (
     <button
       name={isShowing ? "close menu" : "open menu"}
-      onClick={toggle}
-      className="self-center focus:outline-none z-100"
+      onClick={!isShowing && toggle}
+      className="self-center focus:outline-none z-10"
     >
       <svg height="24" width="24">
         <motion.line

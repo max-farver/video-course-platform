@@ -15,7 +15,7 @@ const Dashboard = () => {
         <h1 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mt-10 mb-6">
           Your Courses
         </h1>
-        <div className="md:grid grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <Link href="/">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">

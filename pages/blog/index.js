@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import Layout from "../../components/layout/Layout"
 const Blog = () => {
   return (
@@ -33,194 +35,213 @@ const Blog = () => {
             </div>
           </div>
           <div className="mt-6 grid gap-16 border-t-2 border-gray-100 pt-10 lg:grid-cols-2 xl:grid-cols-3 lg:col-gap-5 lg:row-gap-12">
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-03-16">Mar 16, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
-                  totam vitae illo. Non aliquid explicabo necessitatibus unde.
-                  Sed exercitationem placeat consectetur nulla deserunt vel.
-                  Iusto corrupti dicta.
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-03-10">Mar 10, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Optio cum necessitatibus dolor voluptatum provident commodi
-                  et. Qui aperiam fugiat nemo cumque.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-02-12">Feb 12, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Cupiditate maiores ullam eveniet adipisci in doloribus nulla
-                  minus. Voluptas iusto libero adipisci rem et corporis.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-01-29">Jan 29, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Ipsum voluptates quia doloremque culpa qui eius. Id qui id
-                  officia molestias quaerat deleniti. Qui facere numquam autem
-                  libero quae cupiditate asperiores vitae cupiditate. Cumque id
-                  deleniti explicabo.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-01-29">Jan 29, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Ipsum voluptates quia doloremque culpa qui eius. Id qui id
-                  officia molestias quaerat deleniti. Qui facere numquam autem
-                  libero quae cupiditate asperiores vitae cupiditate. Cumque id
-                  deleniti explicabo.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-01-29">Jan 29, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Ipsum voluptates quia doloremque culpa qui eius. Id qui id
-                  officia molestias quaerat deleniti. Qui facere numquam autem
-                  libero quae cupiditate asperiores vitae cupiditate. Cumque id
-                  deleniti explicabo.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-01-29">Jan 29, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Ipsum voluptates quia doloremque culpa qui eius. Id qui id
-                  officia molestias quaerat deleniti. Qui facere numquam autem
-                  libero quae cupiditate asperiores vitae cupiditate. Cumque id
-                  deleniti explicabo.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className="text-sm leading-5 text-gray-500">
-                <time datetime="2020-01-29">Jan 29, 2020</time>
-              </p>
-              <a href="#" className="block">
-                <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-                </h3>
-                <p className="mt-3 text-base leading-6 text-gray-500">
-                  Ipsum voluptates quia doloremque culpa qui eius. Id qui id
-                  officia molestias quaerat deleniti. Qui facere numquam autem
-                  libero quae cupiditate asperiores vitae cupiditate. Cumque id
-                  deleniti explicabo.
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
                 </p>
-              </a>
-              <div className="mt-3">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150"
-                >
-                  Read full story
-                </a>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
+            <Link href="blog/asdf">
+              <div role="link" className="cursor-pointer">
+                <p className="text-sm leading-5 text-gray-500">
+                  <time datetime="2020-03-16">Mar 16, 2020</time>
+                </p>
+                <div>
+                  <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </h3>
+                  <p className="mt-3 text-base leading-6 text-gray-500">
+                    Illo sint voluptas. Error voluptates culpa eligendi. Hic vel
+                    totam vitae illo. Non aliquid explicabo necessitatibus unde.
+                    Sed exercitationem placeat consectetur nulla deserunt vel.
+                    Iusto corrupti dicta.
+                  </p>
+                </div>
+                <div className="mt-3">
+                  <span className="text-base leading-6 font-semibold text-primary-700 hover:text-primary-600 transition ease-in-out duration-150">
+                    Read full story
+                  </span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
