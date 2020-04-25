@@ -43,7 +43,11 @@ const Nav = () => {
         ) : (
           <>
             <MobileMenuButton isShowing={isShowing} toggle={toggle} />
-            <MobileMenu navLinks={navLinks} isShowing={isShowing} />
+            <MobileMenu
+              navLinks={navLinks}
+              toggle={toggle}
+              isShowing={isShowing}
+            />
           </>
         )}
       </nav>
