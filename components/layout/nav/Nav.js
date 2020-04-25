@@ -10,10 +10,10 @@ const navLinks = [
     name: "About",
     path: "/about",
   },
-  {
-    name: "Services",
-    path: "/services",
-  },
+  // {
+  //   name: "Services",
+  //   path: "/services",
+  // },
   {
     name: "Contact",
     path: "/contact",
@@ -36,7 +36,7 @@ const Nav = () => {
     <div className="bg-primary-900 fixed top-0 w-full border-b-2 border-secondary-500 z-10">
       <nav className="max-w-6xl mx-auto flex justify-between items-baseline px-4 text-gray-50">
         <Link href="/">
-          <a className="text-2xl font-display py-2">J. T.</a>
+          <a className="text-2xl font-display py-2">Justin Timberlake</a>
         </Link>
         {windowSize?.width > 1000 ? (
           <DesktopMenu navLinks={navLinks} />

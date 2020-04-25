@@ -10,7 +10,7 @@ ul {
 }
 
 input {
-  @apply text-gray-900;
+  @apply font-body text-gray-900;
 }
 
 a {
