@@ -6,13 +6,6 @@ import Layout from "../components/layout/Layout"
 const Home = () => {
   const { user, setUser } = useAppState()
 
-  const logoutUser = async () => {
-    await fetch("/api/auth/logout", {
-      method: "POST",
-    })
-    setUser("")
-  }
-
   return (
     <Layout>
       <header id="hero" className="relative h-hero">

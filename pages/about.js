@@ -5,16 +5,9 @@ import SectionHeader from "../components/common/sections/SectionHeader"
 const About = () => {
   return (
     <Layout>
-      <header id="hero" className="relative h-20 mt-2 -z-1 md:hidden">
-        <div className="absolute bottom-0 w-full h-full text-center bg-primary-900 p-4">
-          <h1 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-            About Me
-          </h1>
-        </div>
-      </header>
       <main className="section md:grid grid-cols-2 gap-8">
         <article id="first-section">
-          <h1 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mt-10 mb-6">
+          <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
             About Me
           </h1>
           <SectionHeader>Background</SectionHeader>

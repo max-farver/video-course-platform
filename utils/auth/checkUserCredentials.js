@@ -5,7 +5,7 @@ export const checkUserCredentials = async (ctx) => {
     },
   })
   if (response.status !== 200) {
-    ctx.res.writeHead(302, { Location: "/" })
+    ctx.res.writeHead(302, { Location: "/login" })
     ctx.res.end()
   }
 }

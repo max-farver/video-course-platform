@@ -12,67 +12,67 @@ const Dashboard = () => {
   return (
     <Layout>
       <div className="section mb-8">
-        <h1 className="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mt-10 mb-6">
+        <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
           Your Courses
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #1
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #2
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #3
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #4
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #5
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #6
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #7
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #8
               </h3>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/courses/default-course">
             <div className="rounded-md h-48 bg-gray-300 flex flex-col justify-end overflow-hidden cursor-pointer">
               <h3 className="text-xl bold tracking-wide font-body text-center py-2 text-gray-50 bg-gray-800">
                 Course #9
@@ -85,9 +85,9 @@ const Dashboard = () => {
   )
 }
 
-// export const getServerSideProps = async (ctx) => {
-//   await checkUserCredentials(ctx)
-//   return { props: {} }
-// }
+export const getServerSideProps = async (ctx) => {
+  await checkUserCredentials(ctx)
+  return { props: {} }
+}
 
 export default Dashboard

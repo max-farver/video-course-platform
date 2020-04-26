@@ -66,9 +66,7 @@ export const getSeries = async (variables) => {
     }
   `,
     variables
-  )
-
-  console.log(data)
+  )(data)
 
   return await data?.series
 }

@@ -1,6 +1,6 @@
-// import App from 'next/app'
 import "../styles/output.css"
 import { PageWrapper } from "../utils/appContext"
+
 function MyApp({ Component, pageProps }) {
   return (
     <>

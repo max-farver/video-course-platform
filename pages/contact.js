@@ -11,7 +11,7 @@ const contact = () => {
           </p>
         </section> */}
         <div className="max-w-lg mx-auto lg:flex flex-col justify-center">
-          <h1 className="text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-9">
+          <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
             Get in touch
           </h1>
           <p className="mt-3 text-lg leading-6 text-gray-500">

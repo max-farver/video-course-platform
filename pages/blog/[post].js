@@ -6,7 +6,7 @@ const Post = () => {
     <Layout>
       <div className="section md:flex flex-row mt-10">
         <article className="flex-1">
-          <h1 className="text-3xl mb-2 leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+          <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
             Awesome Cool Article
           </h1>
           <div className="flex mb-8 items-center">

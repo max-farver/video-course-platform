@@ -31,10 +31,12 @@ export default async (req, res) => {
           secure: false,
         }
         cookies.set("session", sessionCookie, options)
+
         return res.end(JSON.stringify({ status: "success" }))
       },
       (error) => {
-        return res.status(401).send("UNAUTHORIZED REQUEST!")
+        "Login Error \n", error
+        return res.status(401)
       }
     )
 }

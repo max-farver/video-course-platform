@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 
+import { checkUserCredentials } from "../../../utils/auth/checkUserCredentials"
 import Layout from "../../../components/layout/Layout"
 import VideoList from "../../../components/video/VideoList"
 
@@ -29,9 +30,9 @@ const VideoPage = () => {
   )
 }
 
-// export const getServerSideProps = (ctx) => {
-//   await checkUserCredentials(ctx)
-//   return { props: { course: ctx.params.course, video: ctx.params.video } }
-// }
+export const getServerSideProps = async (ctx) => {
+  await checkUserCredentials(ctx)
+  return { props: { course: ctx.params.course, video: ctx.params.video } }
+}
 
 export default VideoPage

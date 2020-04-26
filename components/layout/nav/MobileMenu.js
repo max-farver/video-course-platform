@@ -1,17 +1,26 @@
 import React, { useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-
-import { useOutsideClick } from "../../../utils/hooks"
+import { useRouter } from "next/router"
+import { useAppState } from "../../../utils/appContext"
 
 const variants = {
   open: { x: 0 },
-  closed: { x: "160px" },
+  closed: { x: "56rem" },
 }
 
 const MobileMenu = ({ isShowing, toggle, navLinks }) => {
-  const menuRef = useRef()
+  const { user, setUser } = useAppState()
+  const router = useRouter()
+  const logoutUser = async () => {
+    await fetch("/api/auth/logout", {
+      method: "POST",
+    })
+    setUser("")
+    router.reload()
+  }
 
+  const menuRef = useRef()
   const handleOutsideClick = (e) => {
     if (isShowing && menuRef.current && !menuRef.current.contains(e.target)) {
       toggle()
@@ -28,19 +37,31 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
 
   return (
     <motion.div
-      className="absolute top-0 right-0 w-40 text-center bg-primary-900 h-screen -z-10"
+      className="absolute top-0 right-0 w-56  bg-primary-900 h-screen -z-10"
       animate={isShowing ? "open" : "closed"}
-      initial={{ x: 160 }}
+      initial={{ x: "56rem" }}
       variants={variants}
-      transition={{ stiffness: 1, duration: 0.2 }}
+      transition={{ stiffness: 1, duration: 0.3 }}
       ref={menuRef}
     >
       <ul className="flex flex-col pt-16 px-4 text-gray-50">
         {navLinks.map((link) => (
           <Link key={`${link.name}_${link.path}_mobile`} href={link.path}>
-            <a className="mb-4">{link.name}</a>
+            <a className="mb-4 px-2 py-2">{link.name}</a>
           </Link>
         ))}
+        <div className="border-b mb-4"></div>
+        {user ? (
+          <li key={`$user_nav_desktop`}>
+            <button onClick={logoutUser} className="inline px-2 py-2">
+              Logout
+            </button>
+          </li>
+        ) : (
+          <Link key={`$user_nav_desktop`} href="login">
+            <a className="px-2 py-2">Login</a>
+          </Link>
+        )}
       </ul>
     </motion.div>
   )
