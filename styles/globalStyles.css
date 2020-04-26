@@ -46,7 +46,7 @@ h6 {
 }
 
 .btn {
-  @apply block px-8 py-1 shadow-md font-display text-center rounded-md;
+  @apply block px-8 py-1 shadow-lg font-display text-center rounded-md;
 }
 
 .btn-primary {
