@@ -5,6 +5,7 @@ export default async (req, res) => {
   const cookies = new Cookies(req, res)
 
   res.statusCode = 200 // Get the ID token passed and the CSRF token.
+  console.log(req.body)
   const idToken = req.body.idToken.toString()
   // const csrfToken = req.body.csrfToken.toString()
   // // Guard against CSRF attacks.

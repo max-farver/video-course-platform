@@ -54,22 +54,20 @@ const Footer = () => {
                 <ul className="mt-4">
                   <li className="text-base leading-6 text-gray-300">
                     {isMobile ? (
-                      <a className="hover:text-white" href="tel:123-456-7890">
-                        {"(123) 456-7890"}
+                      <a className="hover:text-white" href="tel:406-853-1460">
+                        {"(406) 853-1460"}
                       </a>
                     ) : (
-                      "(123) 456-7890"
+                      "(406) 853-1460"
                     )}
                   </li>
                   <li className="mt-4 text-base leading-6 text-gray-300 hover:text-white">
                     <a href="mailto:example@example.com">example@example.com</a>
                   </li>
                   <li className="mt-4 text-base leading-6 text-gray-300">
-                    700 Dream Ave.
+                    131 N St Hwy 59
                     <br />
-                    Suite 900
-                    <br />
-                    Des Moines, IA 50309-8004
+                    Volborg, MT 59341
                   </li>
                 </ul>
               </div>
@@ -139,8 +137,8 @@ const Footer = () => {
               </a>
             </div>
             <p className="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
-              &copy; {new Date().getFullYear()} Justin Timberlake, Inc. All
-              rights reserved.
+              &copy; {new Date().getFullYear()} Northwest Financial Consulting,
+              All rights reserved.
             </p>
           </div>
         </div>

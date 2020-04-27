@@ -1,13 +1,14 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
 import SectionHeader from "../components/common/sections/SectionHeader"
+import FSImage from "../components/common/FSImage"
 
 const About = () => {
   return (
     <Layout>
       <main className="section md:grid grid-cols-2 gap-8">
         <article id="first-section">
-          <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+          <h1 className="text-4xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mt-2 mb-6 md:my-6">
             About Me
           </h1>
           <SectionHeader>Background</SectionHeader>
@@ -45,10 +46,23 @@ const About = () => {
             <li>Lorem, ipsum dolor.</li>
           </ul>
         </article>
-        <aside className="hidden md:block">
-          <div className="sticky top-0 max-w-sm ml-auto pt-32">
-            <div className="h-72 bg-primary-900 p-24 ">
-              <span className="text-primary-50">fun facts, image, etc</span>
+        <aside className="">
+          <div className="md:sticky top-0 sm:max-w-sm mx-auto md:mr-0 pt-8 md:pt-32 rounded-lg">
+            <div className="h-108 bg-primary-900 p-4 rounded-lg">
+              <div className="relative overflow-hidden rounded-lg h-56">
+                <FSImage src="jt-face.jpg" />
+              </div>
+              <div className="mt-2 px-4">
+                <h4 className="font-body text-2xl bold text-gray-50 tracking-wide">
+                  J.T. Korkow
+                </h4>
+                <div className="border-b w-36 mr-auto mt-1 mb-4"></div>
+                <p className="text-primary-200">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Labore nam ducimus ex aut provident dicta nobis praesentium a
+                  quo.
+                </p>
+              </div>
             </div>
           </div>
         </aside>

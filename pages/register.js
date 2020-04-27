@@ -1,21 +1,39 @@
 import { auth } from "../utils/auth/firebase"
 import { useForm } from "react-hook-form"
+import Link from "next/link"
+import { useRouter } from "next/router"
+
 import Layout from "../components/layout/Layout"
 
 const Register = () => {
+  const router = useRouter()
   const { register, handleSubmit, watch, errors } = useForm()
   const onSubmit = async ({ email, password, confirm }) => {
     if (password === confirm) {
-      await auth().createUserWithEmailAndPassword(email, password)
-      const idToken = await auth().currentUser.getIdToken()
-      await fetch("/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ idToken: idToken }),
-      })
-      auth().signOut()
+      let hadError = false
+      await auth()
+        .createUserWithEmailAndPassword(email, password)
+        .catch((error) => {
+          hadError = true
+        })
+      if (!hadError) {
+        const idToken = await auth()
+          .currentUser.getIdToken()
+          .then(
+            await fetch("/api/auth/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ idToken: idToken }),
+            })
+          )
+
+        setUser(auth().currentUser.email)
+
+        auth().signOut()
+        router.push("/")
+      }
     }
   }
 
@@ -33,9 +51,9 @@ const Register = () => {
           />
           <label htmlFor="password">password</label>
           <input
-            type="text"
+            type="password"
             name="password"
-            className="form-input mt-1 mb-4 block w-full"
+            className="form-input mt-1 mb-4 block w-full "
             ref={register}
           />
           <label htmlFor="confirm">
@@ -45,14 +63,26 @@ const Register = () => {
               : "passwords must match"}
           </label>
           <input
-            type="text"
+            type="password"
             name="confirm"
             className="form-input mt-1 mb-4 block w-full"
             ref={register}
           />
-          <button type="submit" className="btn-primary ">
-            Register
-          </button>
+          <div className="flex justify-between">
+            <button type="submit" className="btn-primary ">
+              Register
+            </button>
+            <div className="flex items-center">
+              <p className="text-xs tracking-wide">
+                Not a Member?{" "}
+                <Link href="/login">
+                  <a className="font-bold text-primary-800 hover:underline">
+                    Login
+                  </a>
+                </Link>
+              </p>
+            </div>
+          </div>
         </form>
       </div>
     </Layout>

@@ -1,32 +1,54 @@
 import Link from "next/link"
 import { useAppState } from "../utils/appContext"
+import { useWindowSize, useToggle } from "../utils/hooks"
+import { useForm } from "react-hook-form"
 
 import Layout from "../components/layout/Layout"
+import FSImage from "../components/common/FSImage"
+import Modal from "../components/common/Modal"
 
 const Home = () => {
   const { user, setUser } = useAppState()
+  const windowSize = useWindowSize()
+  const { register, handleSubmit, watch, errors } = useForm()
+  const { isToggled: modalIsShowing, toggle: modalToggle } = useToggle(false)
+
+  const calculateViability = ({
+    totalAssets,
+    totalLiabilities,
+    annualMargin,
+  }) => {
+    modalToggle()
+  }
 
   return (
     <Layout>
       <header id="hero" className="relative h-hero">
-        <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden"></div>
-        <div className="md:flex flex-col justify-center absolute bottom-0 md:right-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-left bg-primary-hero p-4">
-          <h1 className="text-5xl font-display text-secondary-500 hero-text-shadow leading-10 mb-1">
-            Justin
+        <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden ">
+          {windowSize.width > 1000 && (
+            <FSImage fillHeight={false} src="jt-full-body.jpg" />
+          )}
+          {windowSize.width <= 1000 && windowSize.width > 700 && (
+            <FSImage fillHeight={true} src="jt-full-body.jpg" />
+          )}
+          {windowSize.width <= 700 && (
+            <FSImage fillHeight={false} src="jt-full-body-vertical.jpg" />
+          )}
+        </div>
+        <div className="md:flex flex-col justify-center absolute bottom-0 md:left-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-right bg-primary-hero p-4">
+          <h1 className="text-3xl font-display text-secondary-500 hero-text-shadow leading-9 mb-1">
+            Northwest
             <br />
-            Timberlake
+            Financial Consulting
           </h1>
-          <p className="text-gray-50 hero-text-shadow tracking-wide">
-            Bankruptcy Finance
-          </p>
-          <div className="border-secondary-100 border-b my-3 md:max-w-xs"></div>
+          <div className="border-secondary-100 border-b my-3 mx-auto md:max-w-xs md:mr-0 w-80"></div>
           <h3 className="text-4xl text-gray-50 hero-text-shadow leading-9">
             Over <span>800</span>
             <br />
             Clients Served
           </h3>
           <Link href="contact">
-            <a className="max-w-xs mx-auto text-xl md:ml-0 btn-secondary mt-4">
+            <a className="max-w-xs mx-auto text-xl md:mr-0 btn-secondary mt-4">
               Get in Touch
             </a>
           </Link>
@@ -152,7 +174,7 @@ const Home = () => {
           <div className="section md:flex flex-row justify-between items-center">
             <div className="md:w-1/2">
               <h2 className="section-header mb-2 text-primary-50">
-                Can Declaring Bankruptcy Help Me?
+                Chapter 12 or Chapter 13?
               </h2>
               <p className="text-primary-300">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -164,10 +186,93 @@ const Home = () => {
                 aspernatur minima.
               </p>
             </div>
-            <div className="mt-6 md:mt-0 bg-gray-200 h-72 w-full md:w-96 p-4 text-gray-900">
-              Calculator
-              <br />
-              Here
+            <div className="mt-6 md:my-4 bg-gray-100 rounded-lg h-72 w-full md:w-96 p-4 text-gray-900">
+              <form onSubmit={handleSubmit(calculateViability)}>
+                <div className="flex items-center justify-between mb-4">
+                  <label htmlFor="totalAssets">Total Assets</label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span className="text-gray-500 sm:text-sm sm:leading-5">
+                        $
+                      </span>
+                    </div>
+                    <input
+                      name="totalAssets"
+                      className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
+                      placeholder="0.00"
+                      aria-describedby="price-currency"
+                      ref={register}
+                    />
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span
+                        className="text-gray-500 sm:text-sm sm:leading-5"
+                        id="price-currency"
+                      >
+                        USD
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <label htmlFor="totaLiabilities">Total Liabilities</label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span className="text-gray-500 sm:text-sm sm:leading-5">
+                        $
+                      </span>
+                    </div>
+                    <input
+                      name="totaLiabilities"
+                      className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
+                      placeholder="0.00"
+                      aria-describedby="price-currency"
+                      ref={register}
+                    />
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span
+                        className="text-gray-500 sm:text-sm sm:leading-5"
+                        id="price-currency"
+                      >
+                        USD
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mb-10">
+                  <label htmlFor="annualMargin">Annual Profit Margin</label>
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <span className="text-gray-500 sm:text-sm sm:leading-5">
+                        $
+                      </span>
+                    </div>
+                    <input
+                      id="price"
+                      name="annualMargin"
+                      className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
+                      placeholder="0.00"
+                      aria-describedby="price-currency"
+                      ref={register}
+                    />
+                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                      <span
+                        className="text-gray-500 sm:text-sm sm:leading-5"
+                        id="price-currency"
+                      >
+                        USD
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-between ">
+                  <button
+                    type="submit"
+                    className="btn-primary text-2xl mx-auto"
+                  >
+                    Calculate
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </section>
@@ -259,6 +364,11 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Modal toggle={modalToggle} isShowing={modalIsShowing}>
+          <div className="h-108 w-108">
+            <h1 className="text-3xl mt-10">You are viable!</h1>
+          </div>
+        </Modal>
       </main>
     </Layout>
   )
