@@ -50,7 +50,7 @@ const About = () => {
           <div className="md:sticky top-0 sm:max-w-sm mx-auto md:mr-0 pt-8 md:pt-32 rounded-lg">
             <div className="h-108 bg-primary-900 p-4 rounded-lg">
               <div className="relative overflow-hidden rounded-lg h-56">
-                <FSImage src="jt-face.jpg" />
+                <FSImage src="jt-face.jpg" fillHeight={false} />
               </div>
               <div className="mt-2 px-4">
                 <h4 className="font-body text-2xl bold text-gray-50 tracking-wide">
