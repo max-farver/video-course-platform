@@ -1,5 +1,5 @@
 export const checkUserCredentials = async (ctx) => {
-  const response = await fetch("http://localhost:3000/api/auth/verify", {
+  const response = await fetch(`${process.env.APP_URL}/api/auth/verify`, {
     headers: {
       cookie: ctx.req.headers.cookie,
     },
