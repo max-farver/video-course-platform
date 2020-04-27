@@ -28,7 +28,7 @@ export default async (req, res) => {
         const options = {
           maxAge: expiresIn,
           httpOnly: true,
-          secure: false,
+          secure: process.env.NODE_ENV === "PRODUCTION" ? true : false,
         }
         cookies.set("session", sessionCookie, options)
 
