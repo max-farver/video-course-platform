@@ -3,13 +3,13 @@ import "firebase/auth"
 import { useState, useEffect } from "react"
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DB_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGE_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  apiKey: "AIzaSyBm7FS1ca4O-qlBjM01bv2YG5a8_89jkYU",
+  authDomain: "video-course-platform.firebaseapp.com",
+  databaseURL: "https://video-course-platform.firebaseio.com",
+  projectId: "video-course-platform",
+  storageBucket: "video-course-platform.appspot.com",
+  messagingSenderId: "76687715517",
+  appId: "1:76687715517:web:dd1f9da0bdb3869a3bdbd4",
 }
 
 if (!firebase.apps.length) {

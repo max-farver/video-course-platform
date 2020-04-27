@@ -27,8 +27,7 @@ const responsiveImageFragment = `
 
 async function fetchAPI(query, variables = {}) {
   const data = await client.request(query, variables).catch((err) => {
-    console.log(err.response.errors) // GraphQL response errors
-    console.log(err.response.data)
+    console.log("fetch error")
   })
   return data
 }

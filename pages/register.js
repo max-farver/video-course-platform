@@ -20,13 +20,14 @@ const Register = () => {
         const idToken = await auth()
           .currentUser.getIdToken()
           .then(
-            await fetch("/api/auth/login", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ idToken: idToken }),
-            })
+            async (idToken) =>
+              await fetch("/api/auth/login", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ idToken: idToken }),
+              })
           )
 
         setUser(auth().currentUser.email)
