@@ -32,7 +32,12 @@ const VideoPage = () => {
 
 export const getServerSideProps = async (ctx) => {
   await checkUserCredentials(ctx)
-  return { props: { course: ctx.params.course, video: ctx.params.video } }
+  return {
+    props: {
+      course: ctx.params.course,
+      video: ctx.params.video,
+    },
+  }
 }
 
 export default VideoPage
