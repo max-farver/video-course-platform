@@ -365,7 +365,7 @@ const Home = () => {
           </div>
         </section>
         <Modal toggle={modalToggle} isShowing={modalIsShowing}>
-          <div className="h-108 w-full sm:max-w-sm">
+          <div className="h-108 w-full max-w-sm">
             <h1 className="text-3xl mt-10">You are viable!</h1>
           </div>
         </Modal>

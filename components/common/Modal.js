@@ -13,16 +13,16 @@ const Modal = ({ isShowing, toggle, children }) => {
       onClick={toggle}
       className={`${
         isShowing ? "" : "hidden"
-      } fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primary-hero`}
+      } fixed top-0 left-0 h-screen w-screen flex flex-col justify-center items-center bg-primary-hero p-4`}
     >
       <div
         onClick={(e) => {
           e.stopPropagation()
           console.log(e)
         }}
-        className="rounded-lg p-4 bg-gray-100 overflow-hidden"
+        className="rounded-lg p-4 bg-gray-100 overflow-hidden  w-full mx-sm:max-w-md"
       >
-        <div className=" flex justify-end">
+        <div className="flex justify-end ">
           <div onClick={toggle} className="w-4 h-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
