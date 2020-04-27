@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx tailwindcss build styles/globalStyles.css -o output.css",
+    "build": "next build && npx tailwindcss build styles/globalStyles.css -o styles/output.css",
     "start": "next start"
   },
   "dependencies": {

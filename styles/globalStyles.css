@@ -1,9 +1,5 @@
 @import "tailwindcss/base";
 
-#__next {
-  @apply flex flex-col min-h-screen justify-between;
-}
-
 p,
 ul {
   @apply text-gray-700 font-body;
