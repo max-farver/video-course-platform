@@ -25,14 +25,20 @@ const Home = () => {
     <Layout>
       <header id="hero" className="relative h-hero">
         <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden ">
-          {windowSize.width > 1000 && (
-            <FSImage fillHeight={false} src="jt-full-body.jpg" />
+          {windowSize.width > 1920 && (
+            <FSImage
+              fillHeight={false}
+              src="hero-example-full-res-cropped.jpg"
+            />
           )}
-          {windowSize.width <= 1000 && windowSize.width > 700 && (
-            <FSImage fillHeight={true} src="jt-full-body.jpg" />
+          {windowSize.width <= 1920 && windowSize.width > 950 && (
+            <FSImage fillHeight={false} src="hero-example-1920.jpg" />
           )}
-          {windowSize.width <= 700 && (
-            <FSImage fillHeight={false} src="jt-full-body-vertical.jpg" />
+          {windowSize.width <= 950 && windowSize.width > 500 && (
+            <FSImage fillHeight={false} src="hero-example-med.jpg" />
+          )}
+          {windowSize.width <= 500 && (
+            <FSImage fillHeight={false} src="hero-example-phone.jpg" />
           )}
         </div>
         <div className="md:flex flex-col justify-center absolute bottom-0 md:left-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-right bg-primary-hero p-4">
@@ -80,7 +86,9 @@ const Home = () => {
               </a>
             </Link>
           </div>
-          <div className="hidden md:block w-56 bg-gray-700 h-96 w-96"></div>
+          <div className="hidden md:block overflow-hidden rounded-md shadow-lg h-96 w-96 relative">
+            <FSImage fillHeight={false} src="guys.jpg" />
+          </div>
         </section>
         <section
           id="quote"
@@ -151,7 +159,9 @@ const Home = () => {
           id="methods"
           className="section md:flex flex-row justify-between items-center"
         >
-          <div className="hidden md:block w-56 bg-gray-700 h-96 w-96"></div>
+          <div className="hidden md:block overflow-hidden rounded-md shadow-lg h-96 w-96 relative">
+            <FSImage fillHeight={false} src="charts.jpg" />
+          </div>
           <div className="md:w-1/2">
             <div>
               <h2 className="section-header">

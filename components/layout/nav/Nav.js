@@ -32,8 +32,10 @@ const Nav = () => {
     <div className="bg-primary-900 fixed top-0 w-full border-b-2 border-secondary-500 z-10">
       <nav className="max-w-6xl mx-auto flex justify-between items-baseline px-4 text-gray-50">
         <Link href="/">
-          <a className="tracking-wide sm:tracking-normal sm:text-2xl font-display py-2">
-            Northwest Financial Consulting
+          <a className="tracking-wide sm:tracking-normal text-xl sm:text-2xl font-display py-2">
+            {windowSize.width > 500
+              ? "Northwest Financial Consulting"
+              : "NW Financial Consulting"}
           </a>
         </Link>
         {windowSize?.width > 1000 ? (
