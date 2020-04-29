@@ -3,16 +3,16 @@ const FSImage = ({ src, fillHeight }) => {
     <picture>
       <source
         className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
-        src={require(`../../media/images/${src}?lqip`)}
+        srcset={require(`../../media/images/${src}?lqip`)}
       />
       <source
         className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
-        src={require(`../../media/images/${src}?webp`)}
+        srcset={require(`../../media/images/${src}?webp`)}
         type="image/webp"
       />
       <source
         className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
-        src={require(`../../media/images/${src}`)}
+        srcset={require(`../../media/images/${src}`)}
         type="image/jpeg"
       />
       <img
