@@ -47,8 +47,8 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
       <ul className="flex flex-col pt-16 px-4 text-gray-50">
         {navLinks.map((link) => (
           <Link key={`${link.name}_${link.path}_mobile`} href={link.path}>
-            <li>
-              <a className="mb-4 px-2 py-2">{link.name}</a>
+            <li className="mb-4 px-2 py-2">
+              <a>{link.name}</a>
             </li>
           </Link>
         ))}
