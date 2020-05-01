@@ -1,10 +1,25 @@
-import "../styles/output.css"
+import "../styles/globalStyles.css"
 import { PageWrapper } from "../utils/appContext"
+import { DefaultSeo } from "next-seo"
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <PageWrapper>
+        <DefaultSeo
+          openGraph={{
+            type: "website",
+            locale: "en_US",
+            url: "https://video-course-platform.now.sh/",
+            site_name: "Northwest Financial Consulting",
+          }}
+          twitter={{
+            handle: "@handle",
+            site: "@site",
+            cardType: "summary",
+          }}
+          titleTemplate="NW Financial | %s"
+        />
         <Component {...pageProps} />
       </PageWrapper>
     </>

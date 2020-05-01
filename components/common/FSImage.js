@@ -1,23 +1,27 @@
-const FSImage = ({ src, fillHeight }) => {
+const FSImage = ({ src, alt }) => {
   return (
     <picture>
       <img
-        className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
+        className={`absolute w-full top-0 left-0`}
         src={require(`../../media/images/${src}?lqip`)}
+        alt={alt}
       />
       <source
-        className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
-        srcset={require(`../../media/images/${src}?webp`)}
+        className={`absolute w-full top-0 left-0`}
+        srcSet={require(`../../media/images/${src}?webp`)}
         type="image/webp"
+        alt={alt}
       />
       <source
-        className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
-        srcset={require(`../../media/images/${src}`)}
+        className={`absolute w-full top-0 left-0`}
+        srcSet={require(`../../media/images/${src}`)}
         type="image/jpeg"
+        alt={alt}
       />
       <img
-        className={`absolute ${fillHeight ? "h-full" : "w-full"} top-0 left-0`}
+        className={`absolute w-full top-0 left-0`}
         src={require(`../../media/images/${src}`)}
+        alt={alt}
       />
     </picture>
   )

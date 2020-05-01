@@ -70,7 +70,11 @@ const Register = () => {
             ref={register}
           />
           <div className="flex justify-between">
-            <button type="submit" className="btn-primary ">
+            <button
+              aria-label="Register"
+              type="submit"
+              className="btn-primary "
+            >
               Register
             </button>
             <div className="flex items-center">

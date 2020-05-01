@@ -60,7 +60,7 @@ const Login = () => {
             ref={register}
           />
           <div className="flex justify-between">
-            <button type="submit" className="btn-primary">
+            <button aria-label="Login" type="submit" className="btn-primary">
               Login
             </button>
             <div className="flex items-center">

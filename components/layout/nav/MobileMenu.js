@@ -47,20 +47,28 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
       <ul className="flex flex-col pt-16 px-4 text-gray-50">
         {navLinks.map((link) => (
           <Link key={`${link.name}_${link.path}_mobile`} href={link.path}>
-            <a className="mb-4 px-2 py-2">{link.name}</a>
+            <li>
+              <a className="mb-4 px-2 py-2">{link.name}</a>
+            </li>
           </Link>
         ))}
-        <div className="border-b mb-4"></div>
+        <li className="border-b mb-4"></li>
         {user ? (
           <li key={`$user_nav_desktop`}>
-            <button onClick={logoutUser} className="inline px-2 py-2">
+            <button
+              name="Logout current user"
+              onClick={logoutUser}
+              className="inline px-2 py-2"
+            >
               Logout
             </button>
           </li>
         ) : (
-          <Link key={`$user_nav_desktop`} href="login">
-            <a className="px-2 py-2">Login</a>
-          </Link>
+          <li>
+            <Link key={`$user_nav_desktop`} href="login">
+              <a className="px-2 py-2">Login</a>
+            </Link>
+          </li>
         )}
       </ul>
     </motion.div>

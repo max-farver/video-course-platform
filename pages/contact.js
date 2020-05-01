@@ -195,6 +195,7 @@ const contact = () => {
             </div>
           </div>
           <button
+            aria-label="Submit this form to contact us"
             type="submit"
             className="btn btn-secondary w-full sm:w-auto px-12 py-2 text-gray-900 font-body tracking-wide font-bold mt-8"
           >

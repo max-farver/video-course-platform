@@ -25,6 +25,7 @@ const Blog = () => {
                 />
                 <span className="ml-3 flex-shrink-0 inline-flex rounded-md shadow-sm">
                   <button
+                    aria-label="Search our blog posts"
                     type="button"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-700 hover:bg-primary-500 focus:outline-none focus:bg-primary-500 focus:shadow-outline-primary active:bg-primary-700 transition ease-in-out duration-150"
                   >

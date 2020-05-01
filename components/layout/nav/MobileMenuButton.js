@@ -5,8 +5,8 @@ import { motion } from "framer-motion"
 const MobileMenuButton = ({ isShowing, toggle }) => {
   return (
     <button
-      name={isShowing ? "close menu" : "open menu"}
-      onClick={!isShowing && toggle}
+      aria-label={isShowing ? "close menu" : "open menu"}
+      onClick={() => !isShowing && toggle}
       className="self-center focus:outline-none z-10"
     >
       <svg height="24" width="24">

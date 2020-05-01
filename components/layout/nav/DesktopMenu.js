@@ -26,14 +26,20 @@ const DesktopMenu = ({ navLinks }) => {
       ))}
       {user ? (
         <li key={`$user_nav_desktop`}>
-          <button onClick={logoutUser} className="inline ml-8">
+          <button
+            aria-label="Logout current user"
+            onClick={logoutUser}
+            className="inline ml-8"
+          >
             Logout
           </button>
         </li>
       ) : (
-        <Link key={`$user_nav_desktop`} href="login">
-          <a className="ml-8">Login</a>
-        </Link>
+        <li>
+          <Link key={`$user_nav_desktop`} href="login">
+            <a className="ml-8">Login</a>
+          </Link>
+        </li>
       )}
     </ul>
   )

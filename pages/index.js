@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useAppState } from "../utils/appContext"
 import { useWindowSize, useToggle } from "../utils/hooks"
 import { useForm } from "react-hook-form"
+import { NextSeo } from "next-seo"
 
 import Layout from "../components/layout/Layout"
 import FSImage from "../components/common/FSImage"
@@ -23,22 +24,20 @@ const Home = () => {
 
   return (
     <Layout>
+      <NextSeo title="Home" description="This is neato-burrito" />
       <header id="hero" className="relative h-hero">
-        <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden ">
+        <div className="relative h-full w-full bg-gray-200 -z-10 overflow-hidden">
           {windowSize.width > 1920 && (
-            <FSImage
-              fillHeight={false}
-              src="hero-example-full-res-cropped.jpg"
-            />
+            <FSImage src="hero-example-full-res-cropped.jpg" alt="" />
           )}
           {windowSize.width <= 1920 && windowSize.width > 950 && (
-            <FSImage fillHeight={false} src="hero-example-1920.jpg" />
+            <FSImage src="hero-example-1920.jpg" alt="" />
           )}
           {windowSize.width <= 950 && windowSize.width > 500 && (
-            <FSImage fillHeight={false} src="hero-example-med.jpg" />
+            <FSImage src="hero-example-med.jpg" alt="" />
           )}
           {windowSize.width <= 500 && (
-            <FSImage fillHeight={false} src="hero-example-phone.jpg" />
+            <FSImage src="hero-example-phone.jpg" alt="" />
           )}
         </div>
         <div className="md:flex flex-col justify-center absolute bottom-0 md:left-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-right bg-primary-hero p-4">
@@ -87,7 +86,10 @@ const Home = () => {
             </Link>
           </div>
           <div className="hidden md:block overflow-hidden rounded-md shadow-lg h-96 w-96 relative">
-            <FSImage fillHeight={false} src="guys.jpg" />
+            <FSImage
+              src="guys.jpg"
+              alt="stock photo of some guys talking business"
+            />
           </div>
         </section>
         <section
@@ -160,7 +162,7 @@ const Home = () => {
           className="section md:flex flex-row justify-between items-center"
         >
           <div className="hidden md:block overflow-hidden rounded-md shadow-lg h-96 w-96 relative">
-            <FSImage fillHeight={false} src="charts.jpg" />
+            <FSImage src="charts.jpg" alt="stock photo of charts" />
           </div>
           <div className="md:w-1/2">
             <div>
@@ -208,6 +210,7 @@ const Home = () => {
                     </div>
                     <input
                       name="totalAssets"
+                      id="totalAssets"
                       className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
                       placeholder="0.00"
                       aria-describedby="price-currency"
@@ -233,6 +236,7 @@ const Home = () => {
                     </div>
                     <input
                       name="totaLiabilities"
+                      id="totaLiabilities"
                       className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
                       placeholder="0.00"
                       aria-describedby="price-currency"
@@ -257,7 +261,7 @@ const Home = () => {
                       </span>
                     </div>
                     <input
-                      id="price"
+                      id="annualMargin"
                       name="annualMargin"
                       className="form-input block w-32 pl-7 pr-12 sm:text-sm sm:leading-5"
                       placeholder="0.00"
@@ -276,6 +280,7 @@ const Home = () => {
                 </div>
                 <div className="flex justify-between ">
                   <button
+                    aria-label="Perform a quick check to see if you are viable for bankruptcy"
                     type="submit"
                     className="btn-primary text-2xl mx-auto"
                   >
