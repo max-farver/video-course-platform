@@ -56,7 +56,7 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
         {user ? (
           <li key={`$user_nav_desktop`}>
             <button
-              name="Logout current user"
+              aria-label="Logout current user"
               onClick={logoutUser}
               className="inline px-2 py-2"
             >
