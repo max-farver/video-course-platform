@@ -76,7 +76,7 @@ const Login = () => {
           </div>
         </form>
       </div>
-      <div className="mx-auto text-center mt-16">
+      <div className="mx-auto text-center my-16">
         <h3 className="text-2xl">Preview credentials:</h3>
         <ul>
           <li>email: example@example.com</li>

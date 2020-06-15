@@ -1,21 +1,21 @@
-import { auth } from "../utils/auth/firebase"
-import { useForm } from "react-hook-form"
-import Link from "next/link"
-import { useRouter } from "next/router"
+import { auth } from "../utils/auth/firebase";
+import { useForm } from "react-hook-form";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import Layout from "../components/layout/Layout"
+import Layout from "../components/layout/Layout";
 
 const Register = () => {
-  const router = useRouter()
-  const { register, handleSubmit, watch, errors } = useForm()
+  const router = useRouter();
+  const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = async ({ email, password, confirm }) => {
     if (password === confirm) {
-      let hadError = false
+      let hadError = false;
       await auth()
         .createUserWithEmailAndPassword(email, password)
         .catch((error) => {
-          hadError = true
-        })
+          hadError = true;
+        });
       if (!hadError) {
         const idToken = await auth()
           .currentUser.getIdToken()
@@ -28,19 +28,19 @@ const Register = () => {
                 },
                 body: JSON.stringify({ idToken: idToken }),
               })
-          )
+          );
 
-        setUser(auth().currentUser.email)
+        setUser(auth().currentUser.email);
 
-        auth().signOut()
-        router.push("/")
+        auth().signOut();
+        router.push("/");
       }
     }
-  }
+  };
 
   return (
     <Layout>
-      <div className="max-w-sm mx-auto mt-8 md:mt-10 p-4 md:shadow-lg rounded-lg">
+      <div className="max-w-sm mx-auto mt-8 mb-16 md:mt-10 p-4 md:shadow-lg rounded-lg">
         <h1 className="text-5xl font-bold">Register</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="email">email</label>
@@ -58,10 +58,14 @@ const Register = () => {
             ref={register}
           />
           <label htmlFor="confirm">
-            confirm {"    "}{" "}
-            {watch("password") === watch("confirm")
-              ? ""
-              : "passwords must match"}
+            confirm
+            {watch("password") === watch("confirm") ? (
+              ""
+            ) : (
+              <span className="ml-8 text-red-600 text-sm">
+                passwords must match
+              </span>
+            )}
           </label>
           <input
             type="password"
@@ -91,7 +95,7 @@ const Register = () => {
         </form>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
