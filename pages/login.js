@@ -1,24 +1,24 @@
-import { auth } from "../utils/auth/firebase"
-import { useForm } from "react-hook-form"
-import { useAppState } from "../utils/appContext"
-import { useRouter } from "next/router"
-import Link from "next/link"
+import { auth } from "../utils/auth/firebase";
+import { useForm } from "react-hook-form";
+import { useAppState } from "../utils/appContext";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-import Layout from "../components/layout/Layout"
+import Layout from "../components/layout/Layout";
 
 const Login = () => {
-  const router = useRouter()
-  const { setUser } = useAppState()
-  const { register, handleSubmit, watch, errors } = useForm()
+  const router = useRouter();
+  const { setUser } = useAppState();
+  const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = async ({ email, password }) => {
     // When the user signs in with email and password.
-    let hadError = false
+    let hadError = false;
     await auth()
       .signInWithEmailAndPassword(email, password)
       .catch(function (error) {
-        alert("Invalid email / password")
-        hadError = true
-      })
+        alert("Invalid email / password");
+        hadError = true;
+      });
     if (!hadError) {
       const idToken = await auth()
         .currentUser.getIdToken()
@@ -31,14 +31,14 @@ const Login = () => {
               },
               body: JSON.stringify({ idToken: idToken }),
             })
-        )
+        );
 
-      setUser(auth().currentUser.email)
+      setUser(auth().currentUser.email);
 
-      auth().signOut()
-      router.push("/")
+      auth().signOut();
+      router.push("/courses");
     }
-  }
+  };
 
   return (
     <Layout>
@@ -76,8 +76,15 @@ const Login = () => {
           </div>
         </form>
       </div>
+      <div className="mx-auto text-center mt-16">
+        <h3 className="text-2xl">Preview credentials:</h3>
+        <ul>
+          <li>email: example@example.com</li>
+          <li>password: password</li>
+        </ul>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

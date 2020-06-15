@@ -1,11 +1,11 @@
-import { adminAuth } from "../../../utils/auth/firebaseAdmin"
-import * as Cookies from "cookies"
+import { adminAuth } from "../../../utils/auth/firebaseAdmin";
+import * as Cookies from "cookies";
 
 export default async (req, res) => {
-  const cookies = new Cookies(req, res)
+  const cookies = new Cookies(req, res);
 
-  res.statusCode = 200 // Get the ID token passed and the CSRF token.
-  const idToken = req.body.idToken.toString()
+  res.statusCode = 200; // Get the ID token passed and the CSRF token.
+  const idToken = req.body.idToken.toString();
   // const csrfToken = req.body.csrfToken.toString()
   // // Guard against CSRF attacks.
 
@@ -15,7 +15,7 @@ export default async (req, res) => {
   // }
 
   // Set session expiration to 5 days.
-  const expiresIn = 60 * 60 * 24 * 5 * 1000
+  const expiresIn = 60 * 60 * 24 * 5 * 1000;
   // Create the session cookie. This will also verify the ID token in the process.
   // The session cookie will have the same claims as the ID token.
   // To only allow session cookie setting on recent sign-in, auth_time in ID token
@@ -29,14 +29,14 @@ export default async (req, res) => {
           maxAge: expiresIn,
           httpOnly: true,
           secure: process.env.NODE_ENV === "PRODUCTION" ? true : false,
-        }
-        cookies.set("session", sessionCookie, options)
+        };
+        cookies.set("session", sessionCookie, options);
 
-        return res.end(JSON.stringify({ status: "success" }))
+        return res.end(JSON.stringify({ status: "success" }));
       },
       (error) => {
-        "Login Error \n", error
-        return res.status(401)
+        console.log("Login Error \n", error);
+        return res.status(401).end();
       }
-    )
-}
+    );
+};

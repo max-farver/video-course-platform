@@ -1,27 +1,27 @@
-import Link from "next/link"
-import { useAppState } from "../utils/appContext"
-import { useWindowSize, useToggle } from "../utils/hooks"
-import { useForm } from "react-hook-form"
-import { NextSeo } from "next-seo"
-import Fade from "react-reveal/Fade"
+import Link from "next/link";
+import { useAppState } from "../utils/appContext";
+import { useWindowSize, useToggle } from "../utils/hooks";
+import { useForm } from "react-hook-form";
+import { NextSeo } from "next-seo";
+import Fade from "react-reveal/Fade";
 
-import Layout from "../components/layout/Layout"
-import FSImage from "../components/common/FSImage"
-import Modal from "../components/common/Modal"
+import Layout from "../components/layout/Layout";
+import FSImage from "../components/common/FSImage";
+import Modal from "../components/common/Modal";
 
 const Home = () => {
-  const { user, setUser } = useAppState()
-  const windowSize = useWindowSize()
-  const { register, handleSubmit, watch, errors } = useForm()
-  const { isToggled: modalIsShowing, toggle: modalToggle } = useToggle(false)
+  const { user, setUser } = useAppState();
+  const windowSize = useWindowSize();
+  const { register, handleSubmit, watch, errors } = useForm();
+  const { isToggled: modalIsShowing, toggle: modalToggle } = useToggle(false);
 
   const calculateViability = ({
     totalAssets,
     totalLiabilities,
     annualMargin,
   }) => {
-    modalToggle()
-  }
+    modalToggle();
+  };
 
   return (
     <Layout>
@@ -306,7 +306,7 @@ const Home = () => {
           className="bg-white pt-4 pb-20 px-4 sm:px-6 lg:pt-12 lg:pb-28 lg:px-8"
         >
           <Fade>
-            <div className="max-w-lg mx-auto lg:max-w-6xl">
+            <div className="max-w-lg mx-auto lg:max-w-screen-lg px-4">
               <div className="grid gap-16 pt-10 lg:grid-cols-2 lg:col-gap-5 lg:row-gap-12">
                 <div>
                   <p className="text-sm leading-5 text-gray-500">
@@ -398,7 +398,7 @@ const Home = () => {
         </Modal>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

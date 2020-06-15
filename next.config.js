@@ -1,8 +1,8 @@
-const withPlugins = require("next-compose-plugins")
-const optimizedImages = require("next-optimized-images")
-const path = require("path")
+const withPlugins = require("next-compose-plugins");
+const optimizedImages = require("next-optimized-images");
+const path = require("path");
 
-require("dotenv").config()
+// require("dotenv").config()
 
 module.exports = withPlugins(
   [
@@ -16,8 +16,8 @@ module.exports = withPlugins(
   ],
   {
     webpack(config) {
-      config.resolve.alias.images = path.join(__dirname, "images")
-      return config
+      config.resolve.alias.images = path.join(__dirname, "images");
+      return config;
     },
   }
-)
+);
