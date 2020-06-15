@@ -1,39 +1,39 @@
-import React, { useRef, useEffect } from "react"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { useRouter } from "next/router"
-import { useAppState } from "../../../utils/appContext"
+import React, { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAppState } from "../../../utils/appContext";
 
 const variants = {
   open: { x: 0 },
   closed: { x: "56rem" },
-}
+};
 
 const MobileMenu = ({ isShowing, toggle, navLinks }) => {
-  const { user, setUser } = useAppState()
-  const router = useRouter()
+  const { user, setUser } = useAppState();
+  const router = useRouter();
   const logoutUser = async () => {
     await fetch("/api/auth/logout", {
       method: "POST",
-    })
-    setUser("")
-    router.reload()
-  }
+    });
+    setUser("");
+    router.replace("/login");
+  };
 
-  const menuRef = useRef()
+  const menuRef = useRef();
   const handleOutsideClick = (e) => {
     if (isShowing && menuRef.current && !menuRef.current.contains(e.target)) {
-      toggle()
+      toggle();
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener("click", handleOutsideClick)
+    document.addEventListener("click", handleOutsideClick);
 
     return () => {
-      document.removeEventListener("click", handleOutsideClick)
-    }
-  })
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  });
 
   return (
     <motion.div
@@ -72,7 +72,7 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
         )}
       </ul>
     </motion.div>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;

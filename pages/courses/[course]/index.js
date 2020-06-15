@@ -12,7 +12,7 @@ import VideoList from "../../../components/video/VideoList";
 
 const CoursePage = ({ course, isAuthorized }) => {
   // const data = useQueryOnClient(getSeries, { slug: course })
-  if (!isAuthorized) {
+  if (!isAuthorized || isAuthorized == "undefined") {
     loginRedirect();
   }
 

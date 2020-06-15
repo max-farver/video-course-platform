@@ -12,7 +12,7 @@ const Dashboard = ({ isAuthorized }) => {
   const { user } = useAppState();
   const data = useQueryOnClient(getAllSeriesForDashboard);
 
-  if (!isAuthorized) {
+  if (!isAuthorized || isAuthorized == "undefined") {
     loginRedirect();
   }
 

@@ -11,7 +11,7 @@ const VideoPage = ({ isAuthorized }) => {
   const router = useRouter();
   const { video } = router.query;
 
-  if (!isAuthorized) {
+  if (!isAuthorized || isAuthorized == "undefined") {
     loginRedirect();
   }
 

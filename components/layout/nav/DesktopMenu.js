@@ -1,19 +1,19 @@
-import React from "react"
-import Link from "next/link"
-import { useRouter } from "next/router"
-import { useAppState } from "../../../utils/appContext"
+import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useAppState } from "../../../utils/appContext";
 
 const DesktopMenu = ({ navLinks }) => {
-  const { user, setUser } = useAppState()
-  const router = useRouter()
+  const { user, setUser } = useAppState();
+  const router = useRouter();
 
   const logoutUser = async () => {
     await fetch("/api/auth/logout", {
       method: "POST",
-    })
-    setUser("")
-    router.reload()
-  }
+    });
+    setUser("");
+    router.replace("/login");
+  };
 
   return (
     <ul className="flex first:ml-0 text-gray-50">
@@ -42,7 +42,7 @@ const DesktopMenu = ({ navLinks }) => {
         </li>
       )}
     </ul>
-  )
-}
+  );
+};
 
-export default DesktopMenu
+export default DesktopMenu;
