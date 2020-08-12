@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAppState } from "../../../utils/appContext";
+import { auth } from "firebase";
 
 const DesktopMenu = ({ navLinks }) => {
   const { user, setUser } = useAppState();
@@ -11,6 +12,7 @@ const DesktopMenu = ({ navLinks }) => {
     await fetch("/api/auth/logout", {
       method: "POST",
     });
+    auth().signOut();
     setUser("");
     router.replace("/login");
   };

@@ -17,22 +17,22 @@ const Register = () => {
           hadError = true;
         });
       if (!hadError) {
-        const idToken = await auth()
-          .currentUser.getIdToken()
-          .then(
-            async (idToken) =>
-              await fetch("/api/auth/login", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ idToken: idToken }),
-              })
-          );
+        // const idToken = await auth()
+        //   .currentUser.getIdToken()
+        //   .then(
+        //     async (idToken) =>
+        //       await fetch("/api/auth/login", {
+        //         method: "POST",
+        //         headers: {
+        //           "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify({ idToken: idToken }),
+        //       })
+        //   );
 
         setUser(auth().currentUser.email);
 
-        auth().signOut();
+        // auth().signOut();
         router.push("/");
       }
     }

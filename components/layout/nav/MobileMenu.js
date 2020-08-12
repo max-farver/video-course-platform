@@ -16,6 +16,7 @@ const MobileMenu = ({ isShowing, toggle, navLinks }) => {
     await fetch("/api/auth/logout", {
       method: "POST",
     });
+    auth().signOut();
     setUser("");
     router.replace("/login");
   };
