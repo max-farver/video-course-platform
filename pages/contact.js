@@ -1,5 +1,5 @@
-import Layout from "../components/layout/Layout"
-import { isMobile } from "react-device-detect"
+import Layout from "../components/layout/Layout";
+import { isMobile } from "react-device-detect";
 
 const contact = () => {
   return (
@@ -17,8 +17,8 @@ const contact = () => {
             <div>
               <dt className="sr-only">Postal address</dt>
               <dd>
-                <p>131 N St Hwy 59</p>
-                <p>Volborg, MT 59341</p>
+                <p>658 N Ave.</p>
+                <p>Example, MT 65481</p>
               </dd>
             </div>
             <div className="mt-6">
@@ -169,7 +169,7 @@ const contact = () => {
                 htmlFor="state"
                 className="block text-sm font-medium leading-5 "
               >
-                State / Province
+                State
               </label>
               <div className="mt-1 rounded-md ">
                 <input
@@ -204,7 +204,7 @@ const contact = () => {
         </form>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default contact
+export default contact;

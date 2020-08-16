@@ -43,7 +43,7 @@ const Home = () => {
         </div>
         <div className="md:flex flex-col justify-center absolute bottom-0 md:left-0 w-full md:w-1/2 xl:w-2/5 md h-72 md:h-full text-center md:text-right bg-primary-hero p-4">
           <h1 className="text-3xl font-display text-secondary-500 hero-text-shadow leading-9 mb-1">
-            Northwest
+            Awesome
             <br />
             Financial Consulting
           </h1>

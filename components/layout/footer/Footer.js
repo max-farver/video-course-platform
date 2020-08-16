@@ -1,6 +1,6 @@
-import { isMobile } from "react-device-detect"
+import { isMobile } from "react-device-detect";
 
-import FooterLink from "./FooterLink"
+import FooterLink from "./FooterLink";
 
 const Footer = () => {
   return (
@@ -55,19 +55,19 @@ const Footer = () => {
                   <li className="text-base leading-6 text-gray-300">
                     {isMobile ? (
                       <a className="hover:text-white" href="tel:406-853-1460">
-                        {"(406) 853-1460"}
+                        {"(406) 506-6547"}
                       </a>
                     ) : (
-                      "(406) 853-1460"
+                      "(406) 506-6547"
                     )}
                   </li>
                   <li className="mt-4 text-base leading-6 text-gray-300 hover:text-white">
                     <a href="mailto:example@example.com">example@example.com</a>
                   </li>
                   <li className="mt-4 text-base leading-6 text-gray-300">
-                    131 N St Hwy 59
+                    313 E. St.
                     <br />
-                    Volborg, MT 59341
+                    NotReal, MT 51255
                   </li>
                 </ul>
               </div>
@@ -140,14 +140,14 @@ const Footer = () => {
               </a>
             </div>
             <p className="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
-              &copy; {new Date().getFullYear()} Northwest Financial Consulting,
+              &copy; {new Date().getFullYear()} Awesome Financial Consulting,
               All rights reserved.
             </p>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
