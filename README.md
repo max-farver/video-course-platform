@@ -1,7 +1,5 @@
 <h1 align="center">Video Course Platform</h1>
 <p align="center"><strong>A simple Jira/Trello clone</strong>
-<br/>
-<div align="center"><img src="discountJiraDemoDoubleSpeed.gif"></img></div>
 <h2>About</h2>
 This project was created to gain experience in NextJS, both using Static Site Generation and Server Side Rendering. Once I got comfortable with the framework I abandoned the project. It does not have video functionality due to DatoCMS having an expensive video service (an early oversight).
 
