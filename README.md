@@ -1,30 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Video Course Platform</h1>
+<p align="center"><strong>A simple Jira/Trello clone</strong>
+<br/>
+<div align="center"><img src="discountJiraDemoDoubleSpeed.gif"></img></div>
+<h2>About</h2>
+This project was created to gain experience in NextJS, both using Static Site Generation and Server Side Rendering. Once I got comfortable with the framework I abandoned the project. It does not have video functionality due to DatoCMS having an expensive video service (an early oversight).
 
-## Getting Started
+---
 
-First, run the development server:
+<h2>Goal and requirements</h2>
+Users can create a Project and utlize the functionality of a basic Kanban board.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Static pages for the public portion of the site
+- SSR for all authenticated pages
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2>Key learnings</h2>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- NextJS
+- Built a Custom fluid image component for NextJS
+- Firebase Auth
 
-## Learn More
+<h2>Project status</h2>
+This project is no longer being developed
 
-To learn more about Next.js, take a look at the following resources:
+<h3>Backlog</h3>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Iframe for videos (stored in DatoCMS)
