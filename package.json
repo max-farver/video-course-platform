@@ -12,7 +12,7 @@
     "cookies": "^0.8.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.14.0",
-    "firebase-admin": "^8.10.0",
+    "firebase-admin": "^11.4.1",
     "framer-motion": "^1.10.3",
     "graphql-request": "^1.8.2",
     "isomorphic-unfetch": "^3.0.0",
